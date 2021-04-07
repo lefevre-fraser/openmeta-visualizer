@@ -34,7 +34,7 @@ test:
       - DigTest\bin\Release\DigTest.exe
 
 artifacts:
-  - path: "**\*.log"
+  - path: "**/*.log"
 
 deploy:
   provider: GitHub
