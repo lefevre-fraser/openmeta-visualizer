@@ -360,6 +360,7 @@ namespace DigTest
             //Test Single Point Details
             ShinyUtilities.OpenTabPanel(driver, "Explore-tabset", "Point Details");
             ShinyUtilities.ShinyWait(driver);
+            ShinyUtilities.ShinyWait(driver);
 
             StreamWriter ConsoleError = new StreamWriter(File.Create("logalog.log"));
             ConsoleError.WriteLine(string.Join(",", new ShinySelectInput(driver, "Explore-details_guid").GetAllChoices().ToArray()));
