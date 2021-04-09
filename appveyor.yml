@@ -42,9 +42,10 @@ deploy:
   auth_token:
     secure: RZ7rFvDwiOYn5ibdFtiuii2OonM+K7HPHFilWv2s3Upu/dBaGAQDftrbIS8Jsu0K
   artifact: openmeta-visualizer_x64.msi
-  artifacts:
-    - path: '**\*.log'
   draft: false
   prerelease: false
   on:
     appveyor_repo_tag: true        # deploy on tag push only
+
+artifacts:
+  - path: '**\*.log'
