@@ -47,5 +47,5 @@ deploy:
   on:
     appveyor_repo_tag: true        # deploy on tag push only
 
-after_build:
+on_finish:
   - ps: Get-ChildItem *.log -Recurse | % { Push-AppveyorArtifact $_.FullName -FileName $_.Name }
