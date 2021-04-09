@@ -33,8 +33,8 @@ test:
     only:
       - DigTest\bin\Release\DigTest.exe
 
-artifacts:
-  - path: '**\*.log'
+# artifacts:
+#   - path: '**\*.log'
 
 deploy:
   provider: GitHub
@@ -47,5 +47,5 @@ deploy:
   on:
     appveyor_repo_tag: true        # deploy on tag push only
 
-after_deploy:
-  artifacts: 'logalog.log'
+after_build:
+  - ps: Get-ChildItem *.log -Recurse | % { Push-AppveyorArtifact $_.FullName -FileName $_.Name }
