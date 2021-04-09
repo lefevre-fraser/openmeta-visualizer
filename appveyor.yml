@@ -48,4 +48,4 @@ deploy:
     appveyor_repo_tag: true        # deploy on tag push only
 
 after_deploy:
-  artifacts: '**\*.log'
+  artifacts: 'logalog.log'
