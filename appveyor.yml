@@ -36,6 +36,7 @@ test:
 # artifacts:
 #   - path: '**\*.log'
 
+
 deploy:
   provider: GitHub
   description: Build $(appveyor_build_version)
